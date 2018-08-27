@@ -25,14 +25,20 @@ public class Bridge {
         int choice;
         int coffeLeft = 100;
         while(true)
-        {
+        {   
             System.out.println("Choose your coffe type:"
                     + "\n1: esspresso"
                     + "\n2: latte"
                     + "\n3: americano"
-                    + "\n4: with ice");
+                    + "\n4: with ice"
+                    + "\n0: add coffe");
             choice = in.nextInt();        
-            makeCoffe1.setCoffeType(choices.ChooseType(choice));
+            if(choice==0)
+                choices.addCoffe(coffeLeft);
+            else
+                makeCoffe1.setCoffeType(choices.ChooseType(choice));
+            
+            
 
             if(makeCoffe1.getCoffeType()!=null)
             {
@@ -50,7 +56,14 @@ public class Bridge {
                 if(makeCoffe1.getSuggar()!=null)
                 {
                     makeCoffe1.make();
-                    System.out.println(makeCoffe1.show() + "\n");
+                    if (coffeLeft<0)
+                    {
+                        coffeLeft=0;
+                        System.out.println("No more coffe add more");
+                    }
+                    else
+                        System.out.println(makeCoffe1.show() + "\n"
+                                + "amount left " + coffeLeft);
                 }
                 else 
                     System.out.println("No such option");

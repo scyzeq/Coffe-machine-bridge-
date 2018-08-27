@@ -5,6 +5,8 @@
  */
 package bridge;
 
+import java.util.Scanner;
+
 /**
  *
  * @author AJuda
@@ -62,4 +64,14 @@ public class Choices {
             return coffeCount - 7;
         return 0;
     }
+     
+     public int addCoffe(int coffe)
+     {
+         int toAdd = 0;
+         System.out.println("\nHow much you wast to add?:");
+         Scanner in = new Scanner(System.in);
+         toAdd = in.nextInt();
+         return coffe + toAdd;
+     }
+     
 }
