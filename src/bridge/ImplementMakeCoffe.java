@@ -5,6 +5,8 @@
  */
 package bridge;
 
+import bridge.ENUMS.CoffeType;
+
 /**
  *
  * @author AJuda

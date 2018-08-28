@@ -5,6 +5,7 @@
  */
 package bridge;
 
+import bridge.ENUMS.CoffeType;
 import java.util.Scanner;
 
 /**
@@ -13,6 +14,8 @@ import java.util.Scanner;
  */
 public class Choices {
     
+    private int coffeCount;
+            
     public CoffeType ChooseType(int choice)
     {
         
@@ -68,10 +71,17 @@ public class Choices {
      public int addCoffe(int coffe)
      {
          int toAdd = 0;
-         System.out.println("\nHow much you wast to add?:");
+         System.out.print("\nHow much you wast to add?: ");
          Scanner in = new Scanner(System.in);
          toAdd = in.nextInt();
          return coffe + toAdd;
      }
-     
+
+    public int getCoffeCount() {
+        return coffeCount;
+    }
+
+    public void setCoffeCount(int coffeCount) {
+        this.coffeCount = coffeCount;
+    }
 }

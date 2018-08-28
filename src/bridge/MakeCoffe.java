@@ -5,6 +5,8 @@
  */
 package bridge;
 
+import bridge.ENUMS.CoffeType;
+
 /**
  *
  * @author AJuda
@@ -13,7 +15,6 @@ public abstract class MakeCoffe {
     protected CoffeInterface conffeIntefrace;
     protected CoffeType coffeType;
     protected String suggar;
-//    protected int coffeCount;
     
     public MakeCoffe(CoffeType coffeType, CoffeInterface conffeIntefrace
             , String suggar)
@@ -42,6 +43,14 @@ public abstract class MakeCoffe {
 
     public CoffeType getCoffeType() {
         return coffeType;
+    }
+    
+    public void setCoffeMachine(CoffeType coffeType, CoffeInterface conffeIntefrace
+            , String suggar)
+    {
+        this.coffeType = coffeType;
+        this.conffeIntefrace = conffeIntefrace;
+        this.suggar = suggar;
     }
     
     public String show()
