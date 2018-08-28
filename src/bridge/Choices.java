@@ -35,11 +35,6 @@ public class Choices {
     
     public String HowMuchSugar(int choice)
     {   
-        System.out.println("Choose your coffe type:"
-                + "\n1: esspresso"
-                + "\n2: latte"
-                + "\n3: americano"
-                + "\n4: with ice");
         
         switch (choice) {
             case 1:

@@ -14,6 +14,6 @@ import bridge.CoffeInterface;
 public class NoBeans implements CoffeInterface{
     public void make()
     {
-        System.out.println("No more coffe beans add more");
+        System.out.println("\n\nNo more coffe beans add more");
     }
 }

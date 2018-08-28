@@ -43,7 +43,7 @@ public class Bridge {
 
             if(makeCoffe1.getCoffeType()!=null)
             {
-                System.out.print("Choose your sugar amount:"
+                System.out.print("\nChoose your sugar amount:"
                         + "\n1: one cube"
                         + "\n2: two cubes"
                         + "\n3: three cubes"
